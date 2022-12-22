@@ -1,3 +1,12 @@
+/*
+* Explanation:
+* Partitioned input domain into blocks.
+* For each of the blocks, if the function returns a trivial value it does so immediately.
+* If input types determine return values, grouped them into common control flow branches.
+* Factored out digest computation into a function.
+* Reduced the scope of the helper variable `candidate`.
+*
+* */
 const crypto = require("crypto");
 
 const hexDigest = (obj) => {
@@ -33,12 +42,3 @@ exports.deterministicPartitionKey = (event) => {
 
 };
 
-/*
-* Explanation:
-* Partitioned input domain into blocks.
-* For each of the blocks, if the function returns a trivial value it does so immediately.
-* If input types determine return values, grouped them into common control flow branches.
-* Factored out digest computation into a function.
-* Reduced the scope of the helper variable `candidate`.
-*
-* */

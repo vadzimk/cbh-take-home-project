@@ -1,12 +1,14 @@
-This project contains two challenges - a "Ticket Breakdown" challenge and a "Refactoring" challenge. The two challenges are unrelated, but you should complete both in the same folder and share the link in Coderbyte. Any written answers should be included in markdown files within this folder.
 
+# Task: Refactoring and unit testing
 
-## [Ticket Breakdown](Ticket_Breakdown.md)
+You've been asked to refactor the function `deterministicPartitionKey` in [`dpk-start.js`](dpk-start.js) to make it easier to read and understand without changing its functionality into `dpk.js`. For this task, you should:
 
-## [Refactoring](Refactoring.md)
+1. Write unit tests to cover the existing functionality and ensure that your refactor doesn't break it. We typically use `jest`, but if you have another library you prefer, feel free to use it.
+2. Refactor the function to be as "clean" and "readable" as possible. There are many valid ways to define those words - use your own personal definitions, but be prepared to defend them. Note that we do like to use the latest JS language features when applicable.
+3. Write up a brief (~1 paragraph) explanation of why you made the choices you did and why specifically your version is more "readable" than the original.
 
-If you are a JS novice, here's how to get started:
-1. [Install Node.js](https://nodejs.org/en/download/) (we use `^16`, the latest LTS)
-2. Run `npm i` in this repo to install dependencies
-3. Run `npm test` to run the automated tests
-4. Run `npm start` to launch `index.js` for any manual testing
+## Solution
+
+- [dpk.test.js](dpk.test.js) unit tests
+- [dpk.js](dpk.js) refactored code
+- [graph_coverage_unit_tests.png](graph_coverage_unit_tests.png) graph test coverage
