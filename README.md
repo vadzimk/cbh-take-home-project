@@ -9,6 +9,12 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk-
 
 ## Solution
 
-- [dpk.test.js](dpk.test.js) unit tests
-- [dpk.js](dpk.js) refactored code
-- [graph_coverage_unit_tests.png](graph_coverage_unit_tests.png) graph test coverage
+1. Created unit tests [dpk.test.js](dpk.test.js)  
+2. Refactored code [dpk.js](dpk.js)  
+> - Partitioned input domain into blocks and created unit tests using edge coverage criteria.
+> - For each of the blocks, if the function returns a trivial value it does so immediately.  
+> - If input types determine return values, grouped them into common control flow branches.  
+> - Factored out digest computation into a function. 
+> - Reduced the scope of the helper variable `candidate`.  
+
+![graph_coverage_unit_tests.png](graph_coverage_unit_tests.png "graph test coverage")
